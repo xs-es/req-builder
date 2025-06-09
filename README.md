@@ -71,7 +71,7 @@ Replace "your_project_directory" with the relative path to your code folder. Exa
 ```python
 SRC_DIR = Path("src/")
 ```
-4. ▶️ Run the Script
+## 4. ▶️ Run the Script
 ```bash
 python extract_requirements.py
 ```
@@ -109,17 +109,17 @@ requests==2.31.0
 ### Avoids production surprises caused by invisible dev dependencies.
 
 # 🧬 FAQ
-## Q: Will this pick up unused packages?
-### A: No — it only includes third-party packages that your code actually imports.
+Q: Will this pick up unused packages?
+A: No — it only includes third-party packages that your code actually imports.
 
-## Q: Can I use it in commercial software?
-### A: Yes. Licensed under Apache 2.0 — full rights granted for personal and commercial use.
+Q: Can I use it in commercial software?
+A: Yes. Licensed under Apache 2.0 — full rights granted for personal and commercial use.
 
-## Q: What about dynamically imported packages?
-### A: These aren't detected via static analysis. If you use importlib.import_module() or similar, manually include those.
+Q: What about dynamically imported packages?
+A: These aren't detected via static analysis. If you use importlib.import_module() or similar, manually include those.
 
-## Q: What if I'm not in a virtualenv?
-### A: It'll still run, but the package resolution might include system-wide packages. For best results, use a venv.
+Q: What if I'm not in a virtualenv?
+A: It'll still run, but the package resolution might include system-wide packages. For best results, use a venv.
 
 # 📜 License
 ```pgsql
