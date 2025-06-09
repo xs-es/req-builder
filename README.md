@@ -1,4 +1,4 @@
-### 🧪 Minimal Requirements Extractor
+# 🧪 Minimal Requirements Extractor
 
 **Minimal Requirements Extractor** is a Python utility that scans your source code and generates a **precise `requirements.txt` file** containing only the third-party packages your project actually uses.
 
