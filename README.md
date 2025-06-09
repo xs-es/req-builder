@@ -1,13 +1,22 @@
-# Minimal Requirements Generator
+# 🧪 Minimal Requirements Extractor
 
-This script extracts only the necessary third-party packages used in your Python project and generates a clean `requirements.txt` file with pinned versions.
+A Python tool to generate a clean `requirements.txt` file by scanning only the third-party packages your code actually uses. Perfect for avoiding bloated dependency lists.
 
-## Usage
+---
 
-1. Place `extract_requirements.py` in your project directory.
-2. Modify the `SRC_DIR` variable in the script to point to your code.
-3. Run the script:
+## 🔧 Features
+
+- Extracts real `import` usage from your codebase
+- Excludes all Python standard library modules
+- Resolves to actual PyPI package names
+- Optionally pins versions (`==`) for reproducible installs
+
+---
+
+## 🚀 Getting Started
+
+### 🔁 1. Clone the repository
 
 ```bash
-python extract_requirements.py
-```
+git clone https://github.com/yourusername/minimal-requirements.git
+cd minimal-requirements
