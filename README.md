@@ -61,9 +61,6 @@ source .venv/bin/activate        # Windows: .venv\Scripts\activate
 ```
 # Install your project's true dependencies using pip.
 
-
-
-
 ## 3. 🛠️ Configure the Script
 # Open extract_requirements.py and set your source directory:
 
@@ -75,62 +72,57 @@ Replace "your_project_directory" with the relative path to your code folder. Exa
 SRC_DIR = Path("src/")
 ```
 4. ▶️ Run the Script
-bash
-Copy
-Edit
+```bash
 python extract_requirements.py
-This will generate a clean requirements.txt with only third-party dependencies you actually imported.
+```
+# This will generate a clean requirements.txt with only third-party dependencies you actually imported.
 
-✅ Example
-If your src/app.py contains:
+## ✅ Example
+# If your src/app.py contains:
 
-python
-Copy
-Edit
+```python
 import numpy as np
 import requests
 from flask import Flask
+```
 The generated requirements.txt will be:
 
-text
-Copy
-Edit
+```text
 Flask==2.3.3
 numpy==1.26.4
 requests==2.31.0
-⚙️ Advanced Notes
-❌ No need to clean your environment — script filters standard libraries and unused packages.
+```
+### ⚙️ Advanced Notes
+## ❌ No need to clean your environment — script filters standard libraries and unused packages.
 
-🔍 Uses importlib_metadata to ensure proper PyPI package names and version resolution.
+# 🔍 Uses importlib_metadata to ensure proper PyPI package names and version resolution.
 
-🧠 Compatible with Python 3.7–3.12 and works cross-platform (Linux/macOS/Windows).
+# 🧠 Compatible with Python 3.7–3.12 and works cross-platform (Linux/macOS/Windows).
 
-🔁 Works recursively — scans all .py files in subdirectories.
+# 🔁 Works recursively — scans all .py files in subdirectories.
 
-💡 Tips
-Works well with Docker builds to shrink layer size.
+### 💡 Tips
+# Works well with Docker builds to shrink layer size.
 
-Ideal for CI pipelines to audit or validate dependencies.
+# Ideal for CI pipelines to audit or validate dependencies.
 
-Avoids production surprises caused by invisible dev dependencies.
+# Avoids production surprises caused by invisible dev dependencies.
 
-🧬 FAQ
-Q: Will this pick up unused packages?
-A: No — it only includes third-party packages that your code actually imports.
+### 🧬 FAQ
+## Q: Will this pick up unused packages?
+# A: No — it only includes third-party packages that your code actually imports.
 
-Q: Can I use it in commercial software?
-A: Yes. Licensed under Apache 2.0 — full rights granted for personal and commercial use.
+## Q: Can I use it in commercial software?
+# A: Yes. Licensed under Apache 2.0 — full rights granted for personal and commercial use.
 
-Q: What about dynamically imported packages?
-A: These aren't detected via static analysis. If you use importlib.import_module() or similar, manually include those.
+## Q: What about dynamically imported packages?
+# A: These aren't detected via static analysis. If you use importlib.import_module() or similar, manually include those.
 
-Q: What if I'm not in a virtualenv?
-A: It'll still run, but the package resolution might include system-wide packages. For best results, use a venv.
+## Q: What if I'm not in a virtualenv?
+# A: It'll still run, but the package resolution might include system-wide packages. For best results, use a venv.
 
-📜 License
-pgsql
-Copy
-Edit
+###📜 License
+```pgsql
 Apache License 2.0
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.  
@@ -141,4 +133,5 @@ You may obtain a copy of the License at
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS,  
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  
 See the License for the specific language governing permissions and limitations under the License.
+```
 See the LICENSE file for the full text.
