@@ -41,14 +41,14 @@ minimal-requirements/
 ### 🚀 Quickstart
 
 ## 1. 🔁 Clone the Repository
-# Using HTTPS:
+### Using HTTPS:
 
 ```bash
 git clone https://github.com/yourusername/minimal-requirements.git
 cd minimal-requirements
 ```
 
-# Using GitHub CLI:
+### Using GitHub CLI:
 ```bash
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
@@ -59,10 +59,10 @@ source .venv/bin/activate        # Windows: .venv\Scripts\activate
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 ```
-# Install your project's true dependencies using pip.
+### Install your project's true dependencies using pip.
 
 ## 3. 🛠️ Configure the Script
-# Open extract_requirements.py and set your source directory:
+### Open extract_requirements.py and set your source directory:
 
 ```python
 SRC_DIR = Path("your_project_directory")
@@ -75,10 +75,10 @@ SRC_DIR = Path("src/")
 ```bash
 python extract_requirements.py
 ```
-# This will generate a clean requirements.txt with only third-party dependencies you actually imported.
+### This will generate a clean requirements.txt with only third-party dependencies you actually imported.
 
 ## ✅ Example
-# If your src/app.py contains:
+### If your src/app.py contains:
 
 ```python
 import numpy as np
@@ -92,36 +92,36 @@ Flask==2.3.3
 numpy==1.26.4
 requests==2.31.0
 ```
-### ⚙️ Advanced Notes
+# ⚙️ Advanced Notes
 ## ❌ No need to clean your environment — script filters standard libraries and unused packages.
 
-# 🔍 Uses importlib_metadata to ensure proper PyPI package names and version resolution.
+### 🔍 Uses importlib_metadata to ensure proper PyPI package names and version resolution.
 
-# 🧠 Compatible with Python 3.7–3.12 and works cross-platform (Linux/macOS/Windows).
+### 🧠 Compatible with Python 3.7–3.12 and works cross-platform (Linux/macOS/Windows).
 
-# 🔁 Works recursively — scans all .py files in subdirectories.
+### 🔁 Works recursively — scans all .py files in subdirectories.
 
-### 💡 Tips
-# Works well with Docker builds to shrink layer size.
+# 💡 Tips
+## Works well with Docker builds to shrink layer size.
 
-# Ideal for CI pipelines to audit or validate dependencies.
+### Ideal for CI pipelines to audit or validate dependencies.
 
-# Avoids production surprises caused by invisible dev dependencies.
+### Avoids production surprises caused by invisible dev dependencies.
 
-### 🧬 FAQ
+# 🧬 FAQ
 ## Q: Will this pick up unused packages?
-# A: No — it only includes third-party packages that your code actually imports.
+### A: No — it only includes third-party packages that your code actually imports.
 
 ## Q: Can I use it in commercial software?
-# A: Yes. Licensed under Apache 2.0 — full rights granted for personal and commercial use.
+### A: Yes. Licensed under Apache 2.0 — full rights granted for personal and commercial use.
 
 ## Q: What about dynamically imported packages?
-# A: These aren't detected via static analysis. If you use importlib.import_module() or similar, manually include those.
+### A: These aren't detected via static analysis. If you use importlib.import_module() or similar, manually include those.
 
 ## Q: What if I'm not in a virtualenv?
-# A: It'll still run, but the package resolution might include system-wide packages. For best results, use a venv.
+### A: It'll still run, but the package resolution might include system-wide packages. For best results, use a venv.
 
-###📜 License
+# 📜 License
 ```pgsql
 Apache License 2.0
 
@@ -135,3 +135,5 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and limitations under the License.
 ```
 See the LICENSE file for the full text.
+
+
